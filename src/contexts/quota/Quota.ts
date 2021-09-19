@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import {AlertContext} from "../alert";
 
 export type QuotaValue = {
     allowed: number;
@@ -37,4 +38,10 @@ export const QuotaContext: React.Context<QuotaProps | undefined> = React.createC
 /**
  * useQuota is a custom hook that is a shorthand for useContext(QuotaContext)
  */
-export const useQuota = (): QuotaProps | undefined => useContext(QuotaContext);
+export const useQuota = (): QuotaProps  => {
+    const answer = useContext(QuotaContext);
+    if (answer === undefined) {
+        throw new Error("must be used inside an QuotaContext provider");
+    }
+    return answer;
+}

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import {AlertContext} from "../alert";
 
 /**
  * The Basename object provides information about the basename for the current module when running in the service
@@ -18,4 +19,10 @@ export const BasenameContext: React.Context<Basename | undefined> = React.create
 /**
  * useBasename is a custom hook that is a shorthand for useContext(BasenameContext)
  */
-export const useBasename = (): Basename | undefined => useContext(BasenameContext);
+export const useBasename = (): Basename  => {
+    const answer = useContext(BasenameContext);
+    if (answer === undefined) {
+        throw new Error("must be used inside an BasenameContext provider");
+    }
+    return answer;
+}

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import {AuthContext} from "../auth";
 
 /**
  * The AlertVariant corresponds to the Patternfly AlertVariant but is redeclared here to avoid a hard dependency.
@@ -81,4 +82,10 @@ export const AlertContext: React.Context<Alert | undefined> = React.createContex
 /**
  * useAlert is a custom hook that is a shorthand for useContext(AlertContext)
  */
-export const useAlert = (): Alert | undefined => useContext(AlertContext);
+export const useAlert = (): Alert => {
+    const answer = useContext(AlertContext);
+    if (answer === undefined) {
+        throw new Error("must be used inside an AlertContext provider");
+    }
+    return answer;
+};

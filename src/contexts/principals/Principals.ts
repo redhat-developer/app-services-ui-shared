@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import {AlertContext} from "../alert";
 
 export enum PrincipalType {
     UserAccount= "USER_ACCOUNT",
@@ -30,4 +31,10 @@ export const PrincipalsContext: React.Context<Principals | undefined> = React.cr
 /**
  * usePrincipals is a custom hook that is a shorthand for useContext(PrincipalsContext)
  */
-export const usePrincipals = (): Principals => useContext(PrincipalsContext);
+export const usePrincipals = (): Principals => {
+    const answer = useContext(PrincipalsContext);
+    if (answer === undefined) {
+        throw new Error("must be used inside an PrincipalsContext provider");
+    }
+    return answer;
+};
