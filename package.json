@@ -40,6 +40,6 @@
   },
   "dependencies": {
     "react": "17.0.2",
-    "tslib": "^2.3.1"
+    "tslib": "2.3.1"
   }
 }
