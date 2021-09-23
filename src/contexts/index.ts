@@ -5,3 +5,4 @@ export * from './basename';
 export * from './assets';
 export * from './principals';
 export * from './quota';
+export * from './modals';
