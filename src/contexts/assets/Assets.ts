@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import {AlertContext} from "../alert";
 
 /**
  * The Assets provide access to information about the assets making up the current module, including the path to the assets
@@ -18,4 +19,10 @@ export const AssetsContext: React.Context<Assets | undefined> = React.createCont
 /**
  * useAssets is a custom hook that is a shorthand for useContext(AssetsContext)
  */
-export const useAssets = (): Assets | undefined => useContext(AssetsContext);
+export const useAssets = (): Assets  => {
+    const answer = useContext(AssetsContext);
+    if (answer === undefined) {
+        throw new Error("must be used inside an AssetsContext provider");
+    }
+    return answer;
+};

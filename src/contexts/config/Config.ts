@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import {AlertContext} from "../alert";
 
 /**
  * The Config object provides shared configuration for the services
@@ -159,4 +160,10 @@ export const ConfigContext: React.Context<Config | undefined> = React.createCont
 /**
  * useConfig is a custom hook that is a shorthand for useContext(ConfigContext)
  */
-export const useConfig = (): Config | undefined => useContext(ConfigContext);
+export const useConfig = (): Config => {
+    const answer = useContext(ConfigContext);
+    if (answer === undefined) {
+        throw new Error("must be used inside an ConfigContext provider");
+    }
+    return answer;
+}
