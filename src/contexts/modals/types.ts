@@ -26,5 +26,5 @@ export type ModalRegistryEntry<T extends ModalType> = {
 } & Pick<BaseModalProps, 'variant' | 'title'>;
 
 export type ModalRegistry = {
-  [T in ModalType]: ModalRegistryEntry<T>;
+  [T in ModalType]?: ModalRegistryEntry<T>;
 };

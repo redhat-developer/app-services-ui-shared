@@ -5,6 +5,12 @@ import {
     DeleteTopicProps, ManagePermissionsProps,
     PartitionsChangeProps
 } from "./kafka-modals";
+import {
+    CreateInstanceProps,
+    CreateServiceAccountProps, CredentialsProps,
+    DeleteInstanceProps,
+    DeleteServiceAccountProps, ResetServiceAccountCredentialsProps
+} from "./kas-modals";
 
 export enum ModalType {
     KafkaDeleteTopic = 'KafkaDeleteTopic',
@@ -12,6 +18,12 @@ export enum ModalType {
     KafkaUpdatePartitions = 'KafkaUpdatePartitions',
     KafkaConsumerGroupResetOffset = 'KafkaConsumerGroupResetOffset',
     KafkaManagePermissions = 'KafkaManagePermissions',
+    KasCreateInstance = 'KasCreateInstance',
+    KasDeleteInstance = 'KasDeleteInstance',
+    KasCreateServiceAccount = 'KasCreateServiceAccount',
+    KasDeleteServiceAccount = 'KasDeleteServiceAccount',
+    KasResetServiceAccountCredentials = 'KasResetServiceAccountCredentials',
+    KasDisplayCredentials = 'KasDisplayCredentials',
 }
 
 // A map of modal types to their props
@@ -21,4 +33,10 @@ export interface ModalTypePropsMap {
     [ModalType.KafkaDeleteConsumerGroup]: DeleteConsumerGroupProps;
     [ModalType.KafkaConsumerGroupResetOffset]: ConsumerGroupResetOffsetProps;
     [ModalType.KafkaManagePermissions]: ManagePermissionsProps;
+    [ModalType.KasCreateInstance]: CreateInstanceProps;
+    [ModalType.KasDeleteInstance]: DeleteInstanceProps;
+    [ModalType.KasCreateServiceAccount]: CreateServiceAccountProps;
+    [ModalType.KasDeleteServiceAccount]: DeleteServiceAccountProps;
+    [ModalType.KasResetServiceAccountCredentials]: ResetServiceAccountCredentialsProps;
+    [ModalType.KasDisplayCredentials]: CredentialsProps;
 }
