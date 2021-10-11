@@ -147,3 +147,7 @@ export type CredentialsProps = {
     loading: boolean
     serviceAccount: ServiceAccount
 }
+
+export type TransferOwnershipProps = {
+    kafka: KafkaInstance;
+}
