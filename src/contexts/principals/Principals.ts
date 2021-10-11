@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
-import {AlertContext} from "../alert";
 
 export enum PrincipalType {
-    UserAccount= "USER_ACCOUNT",
+    UserAccount = "USER_ACCOUNT",
     ServiceAccount = "SERVICE_ACCOUNT"
 }
 
 export type Principal = {
-    principalType: PrincipalType
+    principalType?: PrincipalType
     id: string
     displayName?: string
     emailAddress?: string
@@ -21,6 +20,14 @@ export type Principals = {
      * Get all the principals
      */
     getAllPrincipals: () => Principal[]
+    /**
+    * Get all the user accounts
+    */
+    getAllUserAccounts: () => Principal[]
+    /**
+   * Get all the service accounts
+   */
+    getAllServiceAccounts: () => Principal[]
 }
 
 /**
