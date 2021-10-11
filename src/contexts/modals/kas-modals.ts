@@ -148,6 +148,6 @@ export type CredentialsProps = {
     serviceAccount: ServiceAccount
 }
 
-export type ChangeOwnerProps = {
+export type TransferOwnershipProps = {
     kafka: KafkaInstance;
 }

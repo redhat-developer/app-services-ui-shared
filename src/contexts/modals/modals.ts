@@ -6,7 +6,7 @@ import {
     PartitionsChangeProps
 } from "./kafka-modals";
 import {
-    ChangeOwnerProps,
+    TransferOwnershipProps,
     CreateInstanceProps,
     CreateServiceAccountProps, CredentialsProps,
     DeleteInstanceProps,
@@ -25,7 +25,7 @@ export enum ModalType {
     KasDeleteServiceAccount = 'KasDeleteServiceAccount',
     KasResetServiceAccountCredentials = 'KasResetServiceAccountCredentials',
     KasDisplayCredentials = 'KasDisplayCredentials',
-    KasChangeOwner = 'KasChangeOwner'
+    KasTransferOwnership = 'KasTransferOwnership'
 }
 
 // A map of modal types to their props
@@ -41,5 +41,5 @@ export interface ModalTypePropsMap {
     [ModalType.KasDeleteServiceAccount]: DeleteServiceAccountProps;
     [ModalType.KasResetServiceAccountCredentials]: ResetServiceAccountCredentialsProps;
     [ModalType.KasDisplayCredentials]: CredentialsProps;
-    [ModalType.KasChangeOwner]: ChangeOwnerProps;
+    [ModalType.KasTransferOwnership]: TransferOwnershipProps;
 }
