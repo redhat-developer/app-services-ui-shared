@@ -150,4 +150,5 @@ export type CredentialsProps = {
 
 export type TransferOwnershipProps = {
     kafka: KafkaInstance;
+    refreshKafkas?: () => void;
 }
