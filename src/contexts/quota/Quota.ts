@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import {AlertContext} from "../alert";
 
 export type QuotaValue = {
     allowed: number;

@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import {AlertContext} from "../alert";
 
 /**
  * The Config object provides shared configuration for the services
@@ -26,30 +25,6 @@ export type Config = {
          * apiBasePath is the base path for accessing AMS
          */
         apiBasePath: string,
-        /**
-         * eventCode is the "event code" we pass to the terms_review endpoint
-         */
-        eventCode: string,
-        /**
-         * siteCode is the "site code" we pass to the terms_review endpoint
-         */
-        siteCode: string
-        /**
-         * kasQuotaId is the "quota id" we pass to the filter quota cost for kafka
-         */
-        kasQuotaId: string,
-        /**
-         * kasTrialQuotaId is the "quota id" we pass to the filter quota cost for trial instances for kafka
-         */
-        kasTrialQuotaId: string
-          /**
-         * srsQuotaId is the "quota id" we pass to the filter quota cost for service registry
-         */
-        srsQuotaId: string,
-        /**
-         * srsTrialQuotaId is the "quota id" we pass to the filter quota cost for trial instances for service registry
-         */
-        srsTrialQuotaId: string
     }
     /**
      * kas provides configuration for our integration with the KAS Fleet Manager

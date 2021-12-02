@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import {AlertContext} from "../alert";
 
 /**
  * The Basename object provides information about the basename for the current module when running in the service
