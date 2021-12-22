@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import {AuthContext} from "../auth";
 
 /**
  * The AlertVariant corresponds to the Patternfly AlertVariant but is redeclared here to avoid a hard dependency.

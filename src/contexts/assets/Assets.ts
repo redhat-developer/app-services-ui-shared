@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import {AlertContext} from "../alert";
 
 /**
  * The Assets provide access to information about the assets making up the current module, including the path to the assets
