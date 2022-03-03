@@ -57,8 +57,16 @@ export type Config = {
     }
     /**
      * kafka provides configuration for our integration with the Kafka instance
-     */
-    kafka: undefined,
+     */  
+    kafka?: {
+        /**
+         * The template that will be used to generate the full admin url from the kafka bootsrap server host. 
+         * The template must have a '{}' placeholder that will be substitute with the bootsrap server host.
+         * The templete must also specify the admin serer protocol like "https://" or "http://".
+         * The default template is "https://admin-server-{}/rest"
+         */
+         adminServerUrlTemplate?: string
+    };
     /**
      * apicurio_registry provides configuration with the Service Registry instance
      */
