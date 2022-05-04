@@ -92,6 +92,12 @@ export type Config = {
         apiBasePath: string,
         configurators: Record<string, unknown>
     },
+    smart_events: {
+        /**
+         * apiBasePath is the base path for accessing Smart Events apis
+         */
+        apiBasePath: string,
+    },
     /**
      * federatedModules defines how we load all the federated modules in the UI
      */
@@ -119,7 +125,11 @@ export type Config = {
         /**
          * cos defines how we load cos-ui
          */
-        cos: FederatedModuleConfig
+        cos: FederatedModuleConfig,
+        /**
+         * smart_events defines how we load the Smart Events federated module
+         */
+        smart_events: FederatedModuleConfig
     }
 };
 
