@@ -41,6 +41,12 @@ export type Auth = {
          * Get the token for accessing the service registry data plane
          */
         getToken: () => Promise<string> | undefined
+    },
+    smart_events: {
+        /**
+         * Get the token for accessing Smart Events
+         */
+        getToken: () => Promise<string> | undefined
     }
 }
 
