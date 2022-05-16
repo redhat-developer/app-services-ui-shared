@@ -57,10 +57,10 @@ export type Config = {
     }
     /**
      * kafka provides configuration for our integration with the Kafka instance
-     */  
+     */
     kafka?: {
         /**
-         * The template that will be used to generate the full admin url from the kafka bootsrap server host. 
+         * The template that will be used to generate the full admin url from the kafka bootsrap server host.
          * The template must have a '{}' placeholder that will be substitute with the bootsrap server host.
          * The templete must also specify the admin serer protocol like "https://" or "http://".
          * The default template is "https://admin-server-{}/rest"
@@ -84,6 +84,15 @@ export type Config = {
          * apiBasePath is the base path for accessing SRS Fleet Manager
          */
         apiBasePath: string,
+    },
+    /**
+     * ads provides configuration with the API Designer control plane
+     */
+    ads: {
+        /**
+         * editorsBasePath is the base path for loading the editors javascript
+         */
+        editorsBasePath: string,
     },
     cos: {
         /**
@@ -116,6 +125,10 @@ export type Config = {
          * srs defines how we load the federated module(s)
          */
         srs: FederatedModuleConfig
+        /**
+         * srs defines how we load the federated module(s)
+         */
+        ads: FederatedModuleConfig
         /**
          * cos defines how we load cos-ui
          */
