@@ -77,6 +77,19 @@ export interface KafkaInstance {
      * @memberof KafkaRequestAllOf
      */
     instance_type?: string;
+
+    /**
+     * Minimum number of in-sync replicas.
+     * @type {number}
+     * @memberof SupportedKafkaSize
+     */
+    min_in_sync_replicas?: number;
+    /**
+     * Replication factor available to this Kafka instance size.
+     * @type {number}
+     * @memberof SupportedKafkaSize
+     */
+    replication_factor?: number;
 }
 
 export interface ServiceAccount {
