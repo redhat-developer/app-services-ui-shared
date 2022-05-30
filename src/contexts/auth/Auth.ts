@@ -47,7 +47,11 @@ export type Auth = {
          * Get the token for accessing Smart Events
          */
         getToken: () => Promise<string> | undefined
-    }
+    },
+    /**
+     * Get the token end point url
+     */
+    tokenEndPointUrl: string | undefined;
 }
 
 /**
