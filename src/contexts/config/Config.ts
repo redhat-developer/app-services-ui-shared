@@ -39,6 +39,23 @@ export type Config = {
         basePath: string
     }
     /**
+     * masSSO provides configuration for our integration with MASSSO
+     */
+    masSso: {
+        /**
+         * authServerUrl is the URL of the SSO server
+         */
+        authServerUrl: string,
+        /**
+         * clientId is the OpenID Connect client ID the UI uses to talk to MASSSO
+         */
+        clientId: string,
+        /**
+         * realm is the realm the service uses on MASSSO
+         */
+        realm: string
+    }
+    /**
      * kafka provides configuration for our integration with the Kafka instance
      */
     kafka?: {
