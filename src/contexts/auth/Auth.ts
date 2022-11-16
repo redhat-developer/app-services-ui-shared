@@ -47,6 +47,12 @@ export type Auth = {
          * Get the token for accessing Smart Events
          */
         getToken: () => Promise<string> | undefined
+    },
+    sas_ui: {
+        /**
+         * Get the token for accessing Service Accounts UI
+         */
+        getToken: () => Promise<string> | undefined
     }
 }
 
