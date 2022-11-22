@@ -26,6 +26,12 @@ export type Config = {
          */
         apiBasePath: string,
     }
+    sas_ui: {
+        /**
+         * apiBasePath is the base path for accessing SA
+         */
+        apiBasePath: string,
+    }
     /**
      * kas provides configuration for our integration with the KAS Fleet Manager
      */
